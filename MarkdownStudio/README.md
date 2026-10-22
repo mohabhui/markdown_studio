@@ -15,21 +15,8 @@ Markdown Studio can keep multiple Markdown files open at the same time. New docu
 
 **File → Open** supports selecting several files at once. An already-open file is activated instead of duplicated. Close a tab with its close button or `Ctrl+W`; Markdown Studio prompts only when that tab contains unsaved changes. An asterisk beside a tab name identifies unsaved content.
 
-## Start on Windows 11
 
-1. Install Python 3.10 or newer and select **Add Python to PATH** during installation.
-2. Double-click `run_markdown_studio.bat`.
-3. The first launch creates `.venv` and installs the required packages. Later launches reuse it.
-
-## Build the Windows executable
-
-Double-click `markdown_studio_build_release.bat`. The finished application is:
-
-```text
-dist\MarkdownStudio\MarkdownStudio.exe
-```
-
-The release deliberately uses PyInstaller's **one-folder** mode because Qt WebEngine requires helper executables, resources and DLLs. Keep the complete `dist\MarkdownStudio` folder together; copying only `MarkdownStudio.exe` will make the application fail to start.
+## File association
 
 Markdown Studio accepts a Markdown filename on its command line. After Windows associates `.md` files with `MarkdownStudio.exe`, double-clicking a Markdown file opens that file instead of the default new-document text. Rebuild the EXE after updating the source.
 
